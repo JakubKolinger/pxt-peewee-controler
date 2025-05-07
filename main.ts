@@ -1,14 +1,5 @@
-
-radio.setGroup(143)
-
-
-
-
-
-
-let klic = 43
-
-
+radio.setGroup(43)
+radio.setTransmitPower(1000)
 
 
 basic.forever(function () {
@@ -30,6 +21,7 @@ basic.forever(function () {
     
     basic.showIcon(IconNames.Happy)
     
+    let klic = 43
     let zprava = "S|" + klic + "|" + leftMotor + "|" + rightMotor
 
     radio.sendString(zprava)
