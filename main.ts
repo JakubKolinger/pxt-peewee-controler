@@ -9,8 +9,8 @@ basic.forever(function () {
     let speedX = Math.map(x, -1024, 1024, -250, 250)
     let speedY = Math.map(y, -1024, 1024, -250, 250)
 
-    let leftMotor = speedY + speedX
-    let rightMotor = speedY - speedX
+    let leftMotor = speedY - speedX
+    let rightMotor = speedY + speedX
 
     leftMotor = Math.round(leftMotor)
     rightMotor = Math.round(rightMotor)
@@ -26,5 +26,6 @@ basic.forever(function () {
 
     radio.sendString(zprava)
 
+    
    
 })
