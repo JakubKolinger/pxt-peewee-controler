@@ -21,12 +21,14 @@ basic.forever(function () {
     let leftMotor = speedY + speedX
     let rightMotor = speedY - speedX
 
-    leftMotor = Math.constrain(leftMotor, -250, 250)
-    rightMotor = Math.constrain(rightMotor, -250, 250)
-
     leftMotor = Math.round(leftMotor)
     rightMotor = Math.round(rightMotor)
 
+    leftMotor = Math.constrain(leftMotor, -250, 250)
+    rightMotor = Math.constrain(rightMotor, -250, 250)
+
+    
+    basic.showIcon(IconNames.Happy)
     
     let zprava = "S|" + klic + "|" + leftMotor + "|" + rightMotor
 
