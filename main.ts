@@ -1,6 +1,7 @@
 radio.setGroup(43)
 radio.setTransmitPower(7)
 
+basic.showIcon(IconNames.Happy)
 
 basic.forever(function () {
     let x = input.acceleration(Dimension.X)
@@ -19,7 +20,7 @@ basic.forever(function () {
     rightMotor = Math.constrain(rightMotor, -250, 250)
 
     
-    basic.showIcon(IconNames.Happy)
+    
     
     let klic = 43
     let zprava = "S|" + klic + "|" + leftMotor + "|" + rightMotor
