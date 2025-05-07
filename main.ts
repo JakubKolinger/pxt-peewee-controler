@@ -3,6 +3,14 @@ radio.setGroup(143)
 
 
 
+
+
+
+let klic = 43
+
+
+
+
 basic.forever(function () {
     let x = input.acceleration(Dimension.X)
     let y = input.acceleration(Dimension.Y)
@@ -10,14 +18,19 @@ basic.forever(function () {
     let speedX = Math.map(x, -1024, 1024, -250, 250)
     let speedY = Math.map(y, -1024, 1024, -250, 250)
 
-    let zatacka = Math.round(speedX)
-    let rovne = Math.round(speedY)
+    let leftMotor = speedY + speedX
+    let rightMotor = speedY - speedX
+
+    leftMotor = Math.constrain(leftMotor, -250, 250)
+    rightMotor = Math.constrain(rightMotor, -250, 250)
+
+    leftMotor = Math.round(leftMotor)
+    rightMotor = Math.round(rightMotor)
 
     
-    
+    let zprava = "S|" + klic + "|" + leftMotor + "|" + rightMotor
 
-    
-    
+    radio.sendString(zprava)
 
-    basic.pause(100)
+   
 })
