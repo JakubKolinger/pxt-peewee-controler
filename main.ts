@@ -1,5 +1,7 @@
 radio.setGroup(43)
 radio.setTransmitPower(7)
+radio.srtFrequencyBand(81)
+radio.setTransmitSerialNumber(true)
 
 basic.showIcon(IconNames.Happy)
 
@@ -22,8 +24,8 @@ basic.forever(function () {
     
     
     
-    let klic = 43
-    let zprava = "S|" + klic + "|" + leftMotor + "|" + rightMotor
+    
+    let zprava = "S|" + leftMotor + "|" + rightMotor
 
     radio.sendString(zprava)
 
