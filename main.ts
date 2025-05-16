@@ -1,6 +1,6 @@
 radio.setGroup(43)
 radio.setTransmitPower(7)
-radio.srtFrequencyBand(81)
+radio.setFrequencyBand(81)
 radio.setTransmitSerialNumber(true)
 
 basic.showIcon(IconNames.Happy)
