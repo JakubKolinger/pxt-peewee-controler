@@ -48,7 +48,7 @@ basic.forever(function() {
         speed = rightMotor
     }
 
-    speedIN = Math.map(speed, -250, 250, -5, 5)
+    speedIN = Math.map(speed, -250, 250, -9, 9)
     speedOUT = Math.round(speedIN)
     basic.showNumber(Math.abs(speedOUT))
 })
