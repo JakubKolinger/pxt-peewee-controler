@@ -48,8 +48,8 @@ basic.forever(function() {
         speed = rightMotor
     }
 
-    speedIN = Math.map(speed, -250, 250, -9, 9)
+    speedIN = Math.map(speed, -250, 250, -5, 5)
     speedOUT = Math.round(speedIN)
-    speedOUT = Math.constrain(speedOUT, -9, 9)
+    speedOUT = Math.constrain(speedOUT, -5, 5)
     basic.showNumber(speedOUT * -1)
 })
