@@ -29,7 +29,7 @@ basic.forever(function () {
     
     
     
-    let zprava = "S|" + leftMotor + "|" + rightMotor
+    let zprava = "S|" + leftMotor + "|" + rightMotor + "|" + speedOUT
 
     radio.sendString(zprava)
 
