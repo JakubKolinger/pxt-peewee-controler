@@ -44,6 +44,9 @@ basic.forever(function() {
     if (rightMotor > leftMotor) {
         speed = rightMotor
     }
+    if (rightMotor === leftMotor) {
+        speed = rightMotor
+    }
 
     speedIN = Math.map(speed, -250, 250, -9, 9)
     speedOUT = Math.round(speedIN)
