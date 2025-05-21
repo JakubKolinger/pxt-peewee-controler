@@ -3,11 +3,12 @@ radio.setTransmitPower(7)
 radio.setFrequencyBand(81)
 radio.setTransmitSerialNumber(true)
 
-let speed: number = 0
-let speedOUT: number = 0
-let speedIN: number = 0
-let leftMotor: number = 0
-let rightMotor: number = 0
+let speedSEND: number = 0;
+let speed: number = 0;
+let speedOUT: number = 0;
+let speedIN: number = 0;
+let leftMotor: number = 0;
+let rightMotor: number = 0;
 
 basic.forever(function () {
     let x = input.acceleration(Dimension.X)
@@ -29,7 +30,7 @@ basic.forever(function () {
     
     
     
-    let zprava = "S|" + leftMotor + "|" + rightMotor + "|" + speedOUT
+    let zprava = "S|" + leftMotor + "|" + rightMotor + "|" + speedSEND
 
     radio.sendString(zprava)
 
@@ -51,4 +52,6 @@ basic.forever(function() {
     speedIN = Math.map(speed, -250, 250, -9, 9)
     speedOUT = Math.round(speedIN)
     basic.showNumber(Math.abs(speedOUT))
+
+    speedSEND = speedOUT
 })
