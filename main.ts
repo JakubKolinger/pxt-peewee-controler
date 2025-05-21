@@ -3,7 +3,7 @@ radio.setTransmitPower(7)
 radio.setFrequencyBand(81)
 radio.setTransmitSerialNumber(true)
 
-basic.showIcon(IconNames.Happy)
+
 
 basic.forever(function () {
     let x = input.acceleration(Dimension.X)
