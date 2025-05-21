@@ -48,6 +48,6 @@ basic.forever(function() {
     speedIN = Math.map(speed, -250, 250, -9, 9)
     speedOUT = Math.round(speedIN)
     speedOUT = Math.constrain(speedOUT, -9, 9)
-    basic.showNumber(speedOUT)
+    basic.showNumber(speedOUT * -1)
 
 })
