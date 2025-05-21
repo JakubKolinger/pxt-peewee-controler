@@ -51,5 +51,5 @@ basic.forever(function() {
     speedIN = Math.map(speed, -250, 250, -9, 9)
     speedOUT = Math.round(speedIN)
     speedOUT = Math.constrain(speedOUT, -9, 9)
-    whaleysans.showNumber(speedOUT * -1)
+    basic.showNumber(speedOUT * -1)
 })
